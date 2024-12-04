@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.calc-btn {
+    @apply bg-gray-300 p-4 rounded-lg text-xl font-bold hover:bg-gray-400 transition;
+}
+
