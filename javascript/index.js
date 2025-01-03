@@ -1,38 +1,40 @@
-// INTRODUCTUION TO JS
+//** INTRODUCTUION TO JS
 // console.log('test');
 // window.alert('test');
-/*===============DOM===================*/
+//**===============DOM===================*/
 //The 'document' object allows you to access and manipulate elements in the HTML
 //'document' is a global object that represents the HTML document (or webpage)
 
-/*------------------VARIABLES---------------------*/
+// ?==========================================================================================
+
+//***------------------VARIABLES---------------------*/
 //variable = container that stores a value
 
-//-------- Two tpes of variables----------- //
-// 1. declaration let x; <---declaration needs to be unique 
-// 2. assignments x = 1;
+//**-------- Two tpes of variables----------- //
+// 1. declaration --> let x; <---declaration needs to be unique
+// 2. assignments --> x = 1;
 
-/*------------DECLARATION-------------*/
+//*------------DECLARATION-------------*/
 // declaration variableName;
 // let variableName;   // Declaration of a variable without a value
 // let x; 
 // let x; double declaration will show a syntax error, change to let y;
 
-/*-------------ASSIGNMENT--------------*/
+//*-------------ASSIGNMENT--------------*/
 // variableName = assignmentValue
 // x = 100;
 
-/*-------------COMBINED--------------*/
+//*-------------COMBINED--------------*/
 //Both declaration and assignment
 //declaration variableName = assignmentValue
 //let x = 100;
 
-/*-------------QUOTATIONS--------------*/
+//*-------------QUOTATIONS--------------*/
 // " " Common for simple strings, allows single quotes inside --> "Hello, world!"	
 // ' ' Another common way to define strings, escape single quotes --> 'It\'s a nice day'
 // ` ` Allows multi-line strings and expression interpolation or insert a variable inside --> `Hello, ${name}!`
 
-/*-------------DATA TYPES--------------*/
+//*-------------DATA TYPES--------------*/
 // Number 
 // "String"
 // Boolean: True or False
@@ -40,14 +42,15 @@
 // let x = "Some text";
 // let x = true;
 
-// When using a tempalte literal for strngs can be like this
+//* When using a tempalte literal for strngs can be like this
 // let name = 'John';
-// let x = `Hello, ${name}`;  // Using an expression inside the string
+// let x = `Hello, ${name}`;  //* Using an expression inside the string
 // console.log(x);  // Output: Hello, John
 
-// arithmetic operators = operands("values, variables, etc.")
+// ARITHMETIC OPERATORS = operands("values, variables, etc.")
 //                        operators(+, -, *, /) example: 11 = x + 5;
 
+// ?==========================================================================================
 /*-------------TAKING USERS INPUT--------------*/
 // let textin;
 // document.getElementById("submitbtn").onclick = function () {
@@ -55,7 +58,7 @@
 //     document.getElementById("displayin").textContent = `NIGGA ${textin}`;
 // }
 
-
+// ?==========================================================================================
 /*-------------DATA TYPE CONVERSION--------------*/
 // let x = "one"; //Not a Number (NaN)
 // let y = "two";
@@ -67,7 +70,7 @@
 
 // console.log(x, y, z, typeof x, typeof y, typeof z);
 
-
+// ?==========================================================================================
 
 /*-------------BUTTON CLICK COUNTER--------------*/
 // const increment = document.getElementById("increment");
@@ -93,18 +96,18 @@
 //     counter.textContent = count;
 // }
 
-
+// ?==========================================================================================
 /*-------------DELAY DISPLAY--------------*/
 // function logMessage() {
 //     console.log("Message logged!");
 //   }
 //  
-//   // Pass the function reference (not executed yet)
+//    Pass the function reference (not executed yet)
 //   setTimeout(logMessage, 2000); // Waits 2 seconds, then executes logMessage
 // 
-//   // Call it immediately (executed immediately)
+//    Call it immediately (executed immediately)
 //   logMessage(); // Outputs: "Message logged!" right now
-
+// ?==========================================================================================
 
 /*-------------IF, NESTED IF, ELSE IF STATEMENTS--------------*/
 // const inputage = document.getElementById("inputage");
@@ -186,9 +189,7 @@
 //     }
 //     else{
 //         msg.textContent = `NO OPTION WAS CHECKED`
-//     }
-
-    
+//     }    
 //     if(fradio.checked){
 //         rmsg.textContent = `Radio 1 was selected`
 //     }
@@ -205,30 +206,180 @@
 
 
 
+// ?==========================================================================================
 
 
+/*-------------SWITCH STATEMENT--------------*/
+// i replaced the onlick function to addeventlistener to make
+// document.getElementById("submitzodiac").addEventListener("click", function(){
+//     let year = document.getElementById("inputyear").value;
+//     year = Number(year);
+//     let zodiac;
 
-/*-------------SWITCH--------------*/
+//     switch(year){
+//         case 1956:
+//         case 1968:
+//         case 1980:
+//         case 1992:
+//         case 2004:
+//         case 2016:
+//             zodiac = `YEAR OF THE RAT`
+//             break;
+
+//         case 1949:
+//         case 1961:
+//         case 1973:
+//         case 1985:
+//         case 1997:
+//         case 2009:
+//         case 2021:
+//         case 2033 :
+//             zodiac = `YEAR OF THE OX`
+//             break;
+//         default:
+//             zodiac = "TINAMAD NA AKO ulit ulitin practice lang naman";
+//     }
+//     document.getElementById("resultzodiac").innerHTML = zodiac;
+// });
 
 
+// ?==========================================================================================
 
-document.getElementById("sbmtres").addEventListener("click", function()
-{
-    let car = document.getElementById("inputcar").value.toLowerCase();
-    let result;
-        switch(car){
-            case  "toyota":
-                result = "NOT A LUXURY CAR";
-                break;
-            default:
-                return "UNKNOWN CAR TYPE";
+
+// /*-------------STRING METHODS--------------*/ --> allow you to manipulate and work with text (string)
+//  javascript has different, you can search on chatgpt or google on what strings methods is suited in your situation
+
+// let str = "this is a string";
+
+// result = str.startsWith("a");
+
+// if (result){
+//     console.log("meron daw")
+// }
+// else{
+//     console.log("wala eh")
+// }
+// console.log(result);
+
+// ?==========================================================================================
+
+/*-------------STRING MANIPULATION--------------*/
+// you can search on chatgpt or google on what string manipulation is suited in your situation
+// let str = "123123-2323-123123";
+
+// result = str.replaceAll("-", " ")
+// console.log(result)
+// console.log(`Dashes Replaced With Spaces ${result}`)
+
+// ?==========================================================================================
+
+
+//------- STRING SLICING----------/ --> creating a substring from a portion of another string string.slice(start, end)
+// const myname = "krungkrung monolith";
+// let firstname = myname.slice(0, myname.indexOf(" ")); // krungkrung
+// const  lastname = myname.slice(myname.indexOf(" ")+1); //monolith if no +1 space will included " "monolith
+// console.log(firstname) firstname is now an independent string containing "krungkrung" extracted string from const myname
+// console.log(lastname) also same as first name explanation
+
+
+// --- THIS IS AN EXPERIMENTAL IMPLEMENTATION TO SPLIT A STRING INTO AN ARRAY --- // 
+// document.getElementById("submitname").addEventListener("click", function() {
+//     const fullname = document.getElementById("inputname").value.trim(); // Trim to remove extra spaces;
+//     let parts = fullname.split(" ")
+//     let firstname = parts[0] ||  "Unknown";
+//     const firstname = fullname.slice(0, fullname.indexOf(" "));
+//     if(parts.length === 2){
+//         console.log(`your fullname is 2 ${firstname}`)
+//     }else if(parts.length === 3){
+//         console.log("your fullname is 3")
+//     }else if (parts.length === 4){
+//         console.log("your fullname is 4")
+//     }
+//     else{
+//         console.log("wala di gumana una")
+//     }
+//     console.log(firstname)
+//     console.log(parts)
+// })
+
+// ?==========================================================================================
+
+// --- METHOD CHAINING --- //  calling one method after another in one continous line of code
+        // const cars = ["toyota", "nissan", "honda"]
+        // let join = cars.map(car => car.charAt(0).toUpperCase() + car.slice(1).toLowerCase()).join().replaceAll(",", " ");
+        // console.log(join)
+        // console.log (cars, typeof cars)
+        
+
+// ?==========================================================================================
+
+// --- LOGICAL OPERATORS --- // used to combine or manipulate boolean values
+// (true or false) 
+// AND = && 
+// OR = ||
+//  NOT = !
+
+// This is AND operator 
+
+// let logical = "Julius";
+// if(logical.includes("ul") && logical.includes("li")){    ----> The && operator checks both conditions. The code inside the block will only run if both conditions are true.
+//         console.log("yes it has")
+// }else{
+//         console.log("it dosent")
+// }
+
+// This is OR operator
+// The || operator checks if either of the conditions is true. The code will run if at least one condition is true.
+// switch(true){
+//         case logical.includes("J") && logical.includes("z"): console.log("first was executed");
+//         break;
+//         case logical.includes("u") || logical.includes("z"): console.log("have");
+//         break;
+//         default:console.log("nothing")
+// }
+
+
+// This is the NOT operator example with parentheses for correct precedence
+// The `!` negates the result of the comparison (logical.length <= 6)
+
+// if (!(logical.length <= 6)) {
+//         console.log("testing");  // This will run if logical.length is greater than 6
+//     } else {
+//         console.log("not working");  // This will run if logical.length is less than or equal to 6
+//     }
+/*
+Explanation:
+        The parentheses ensure the comparison logical.length <= 6 is evaluated first. Then, the result (true or false) is negated by !. If the length is 6 or less, logical.length <= 6 is true, but ! makes it false, so the else block runs. If the length is greater than 6, logical.length <= 6 is false, and ! makes it true, so the if block runs.
+
+        This is the NOT operator example without parentheses (incorrect usage of precedence)
+        The expression is evaluated as: !(logical.length) <= 6
+        Here, the NOT operator negates the value of logical.length before comparing it to 6
+
+        if (!logical.length <= 6) {
+                console.log("testing");  // This will run unexpectedly
+        } else {
+                console.log("not working");  // This will run unexpectedly
         }
-        document.getElementById("carResult").innerText = result;
-});
 
-if(result == toyota){
-    console.log("ee?")
-}
+Explanation:
+        The ! operator applies to logical.length first due to precedence, making !6 false. This changes the comparison to false <= 6, which evaluates to true (false is coerced to 0). The if block runs unexpectedly because of this negation. Operator precedence: ! has higher precedence than comparison operators, so it negates the value before the comparison.
+
+    // **Operator Precedence Notes**:
+    // 1. `!` (logical NOT) has higher precedence than comparison operators like `<=`.
+    // 2. When you use `!` without parentheses, it negates the value **before** the comparison happens.
+
+    // ?==========================================================================================
+
+// --------------------------STRICT EQUALITY-------------------------------//
+//  = assignment operator
+//  == comparison operator (compare if values are eqal)
+//  === strict equality operator (compare if values & datatype are equal)
+//  != inequality operator
+//  !== strict inequality operator
+
+
+
+
 
 
 
